@@ -1,3 +1,10 @@
+// In your seed/route.js file
+import bcrypt from 'bcryptjs';
+
+// Example usage:
+const password = 'astapro';
+const hash = await bcrypt.hash(password, 10);
+const compare = await bcrypt.compare(password, hash);
 // import postgres from 'postgres';
 
 // const sql = postgres(process.env.POSTGRES_URL!, { ssl: 'require' });
